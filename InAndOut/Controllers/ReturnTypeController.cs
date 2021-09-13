@@ -32,7 +32,6 @@ namespace SampleApplication.Controllers
         {
             return Ok();
         }
-
         /// <summary>
         /// returns a Created (201) response with a Location header. 
         /// This indicates the request has been fulfilled and has resulted 
