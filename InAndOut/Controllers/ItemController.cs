@@ -22,10 +22,21 @@ namespace InAndOut.Controllers
             IEnumerable<Item> objList = _db.Items;
             return View(objList);
         }
-
+        
+        // GET-CREATE
         public IActionResult Create()
         {
             return View();
+        } 
+        
+        // POST-CREATE
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Item obj)
+        {
+            _db.Items.Add(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
