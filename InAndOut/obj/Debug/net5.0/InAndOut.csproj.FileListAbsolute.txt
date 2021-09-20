@@ -432,3 +432,5 @@ C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\bin\Debug\net5.0\Microsoft
 C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\obj\Debug\net5.0\InAndOut.csproj.AssemblyReference.cache
 C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\Item\Index.cshtml.g.cs
 C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\Item\Create.cshtml.g.cs
+C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\Expenses\Index.cshtml.g.cs
+C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\Expenses\Create.cshtml.g.cs
