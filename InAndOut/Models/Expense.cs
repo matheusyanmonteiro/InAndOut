@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace InAndOut.Models
 {
-    public class Expenses
+    public class Expense
     {
         [Key]
         public int Id { get; set; }
