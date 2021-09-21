@@ -12,7 +12,10 @@ namespace InAndOut.Models
         [Key]
         public int Id { get; set; }
         [DisplayName("Expense name")]
+        [Required]
         public string ExpensesName { get; set; }
+        [Required]
+        [Range(0.01, double.MaxValue, ErrorMessage = "Amount Must be Greater than 0,01!")]
         public double Amount { get; set; }
     }
 }
