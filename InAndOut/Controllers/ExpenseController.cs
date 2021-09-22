@@ -47,15 +47,12 @@ namespace InAndOut.Controllers
         public IActionResult Delete(int? id)
         {
             if (id == null || id == 0)
-            {
                 return NotFound();
-            }
+   
             var obj = _db.Expenses.Find(id);
 
             if (obj == null)
-            {
                 return NotFound();
-            }
 
             return View(obj);
         }
@@ -66,15 +63,43 @@ namespace InAndOut.Controllers
         public IActionResult DeletePost(int? id)
         {
             var obj = _db.Expenses.Find(id);
-            if(obj == null)
-            {
+
+            if (obj == null)
                 return NotFound();
-            }
 
             _db.Expenses.Remove(obj);
             _db.SaveChanges();
 
             return RedirectToAction("Index");
+        }
+
+        //UPDATE => GET METHOD
+        public IActionResult Update(int? id)
+        {
+            if (id == null || id == 0)
+                return NotFound();
+
+            var obj = _db.Expenses.Find(id);
+
+            if (obj == null)
+                return NotFound();
+
+            return View(obj);
+        }
+
+        //UPDATE => POST METHOD
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Update(Expense obj)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Expenses.Update(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(obj);
         }
     }
 }
