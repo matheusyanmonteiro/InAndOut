@@ -1,0 +1,44 @@
+﻿@model IEnumerable<InAndOut.Models.ExpenseType>
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Categories List</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-controller="ExpenseType" asp-action="Create" class="btn btn-primary">Create a new Category</a>
+        </div>
+    </div>
+</div> 
+
+            @if (Model.Count() > 0)
+            {
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <th>
+                            Category
+                        </th>
+                        <th>
+                            Changes
+                        </th>
+                    </thead>
+                    <tbody>
+                        @foreach (var expensestypes in Model)
+                        {
+                            <tr>
+                                <td width="50%"> @expensestypes.Category</td>
+                                <td>
+                                    <div class="w-100 btn-group" role="group">
+                                        <a asp-controller="ExpenseType" asp-action="Update" asp-route-Id="@expensestypes.Id" class="btn btn-primary mx-1">Update</a>
+                                        <a asp-controller="ExpenseType" asp-action="Update" asp-route-Id="@expensestypes.Id" class="btn btn-danger mx-1">Delete</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>No Categorys Registred Yet!</p>
+            }
