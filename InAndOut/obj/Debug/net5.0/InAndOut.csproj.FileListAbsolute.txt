@@ -438,3 +438,4 @@ C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Vie
 C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\Expense\Update.cshtml.g.cs
 C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\ExpenseType\Index.cshtml.g.cs
 C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\ExpenseType\Create.cshtml.g.cs
+C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\ExpenseCategory\Index.cshtml.g.cs

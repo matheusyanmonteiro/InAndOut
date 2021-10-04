@@ -17,5 +17,6 @@ namespace InAndOut.Data
         public DbSet<Item> Items { get; set; }
         public DbSet<Expense> Expenses { get; set; }
         public DbSet<ExpenseType> ExpensesTypes { get; set; }
+        public DbSet<ExpenseCategory> ExpensesCategories { get; set; }
     }
 }
