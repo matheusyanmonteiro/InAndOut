@@ -15,6 +15,6 @@ namespace InAndOut.Models
 
         [DisplayName("Category Name")]
         [Required]
-        public string Category { get; set; }
+        public string Name { get; set; }
     }
 }

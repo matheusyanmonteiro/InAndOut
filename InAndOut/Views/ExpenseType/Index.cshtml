@@ -26,11 +26,11 @@
                         @foreach (var expensestypes in Model)
                         {
                             <tr>
-                                <td width="50%"> @expensestypes.Category</td>
+                                <td width="50%"> @expensestypes.Name</td>
                                 <td>
                                     <div class="w-100 btn-group" role="group">
                                         <a asp-controller="ExpenseType" asp-action="Update" asp-route-Id="@expensestypes.Id" class="btn btn-primary mx-1">Update</a>
-                                        <a asp-controller="ExpenseType" asp-action="Update" asp-route-Id="@expensestypes.Id" class="btn btn-danger mx-1">Delete</a>
+                                        <a asp-controller="ExpenseType" asp-action="Delete" asp-route-Id="@expensestypes.Id" class="btn btn-danger mx-1">Delete</a>
                                     </div>
                                 </td>
                             </tr>

@@ -442,3 +442,5 @@ C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Vie
 C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\ExpenseCategory\Create.cshtml.g.cs
 C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\ExpenseCategory\Delete.cshtml.g.cs
 C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\ExpenseCategory\Update.cshtml.g.cs
+C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\ExpenseType\Delete.cshtml.g.cs
+C:\Users\Matheus.Monteiro\Documents\InAndOut\InAndOut\obj\Debug\net5.0\Razor\Views\ExpenseType\Update.cshtml.g.cs
