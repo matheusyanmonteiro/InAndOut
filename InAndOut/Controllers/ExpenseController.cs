@@ -1,6 +1,7 @@
 ﻿using InAndOut.Data;
 using InAndOut.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,13 @@ namespace InAndOut.Controllers
         //GET => CREATE METHOD
         public IActionResult Create()
         {
+            IEnumerable<SelectListItem> TypeDropDown = _db.ExpensesTypes.Select(i => new SelectListItem {
+                Text = i.Name,
+                Value = i.Id.ToString()
+            });
+
+            ViewBag.TypeDropDown = TypeDropDown;
+
             return View();
         }
 
@@ -36,7 +44,7 @@ namespace InAndOut.Controllers
         { 
             if (ModelState.IsValid)
             {
-                obj.ExpenseTypeId = 2;
+                //obj.ExpenseTypeId = 2;
                 _db.Expenses.Add(obj);
                 _db.SaveChanges();
                 return RedirectToAction("index");
@@ -85,6 +93,14 @@ namespace InAndOut.Controllers
             if (obj == null)
                 return NotFound();
 
+            IEnumerable<SelectListItem> TypeDropDown = _db.ExpensesTypes.Select(i => new SelectListItem
+            {
+                Text = i.Name,
+                Value = i.Id.ToString()
+            });
+
+            ViewBag.TypeDropDown = TypeDropDown;
+
             return View(obj);
         }
 
@@ -95,7 +111,7 @@ namespace InAndOut.Controllers
         {
             if (ModelState.IsValid)
             {
-                obj.ExpenseTypeId = 2;
+                //obj.ExpenseTypeId = 2;
                 _db.Expenses.Update(obj);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
