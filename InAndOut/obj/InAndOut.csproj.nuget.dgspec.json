@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matheus.Monteiro\\Documents\\InAndOut\\InAndOut\\InAndOut.csproj": {}
+    "C:\\_src\\InAndOut\\InAndOut\\InAndOut.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matheus.Monteiro\\Documents\\InAndOut\\InAndOut\\InAndOut.csproj": {
+    "C:\\_src\\InAndOut\\InAndOut\\InAndOut.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matheus.Monteiro\\Documents\\InAndOut\\InAndOut\\InAndOut.csproj",
+        "projectUniqueName": "C:\\_src\\InAndOut\\InAndOut\\InAndOut.csproj",
         "projectName": "InAndOut",
-        "projectPath": "C:\\Users\\Matheus.Monteiro\\Documents\\InAndOut\\InAndOut\\InAndOut.csproj",
-        "packagesPath": "C:\\Users\\Matheus.Monteiro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matheus.Monteiro\\Documents\\InAndOut\\InAndOut\\obj\\",
+        "projectPath": "C:\\_src\\InAndOut\\InAndOut\\InAndOut.csproj",
+        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
+        "outputPath": "C:\\_src\\InAndOut\\InAndOut\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Matheus.Monteiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

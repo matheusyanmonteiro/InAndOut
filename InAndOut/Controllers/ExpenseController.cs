@@ -22,6 +22,12 @@ namespace InAndOut.Controllers
         public IActionResult Index()
         {
             IEnumerable<Expense> objList = _db.Expenses;
+
+            foreach (var obj in objList)
+            {
+                obj.ExpenseType = _db.ExpensesTypes.FirstOrDefault(u => u.Id == obj.ExpenseTypeId);
+            }
+
             return View(objList);
         }
 
@@ -37,11 +43,7 @@ namespace InAndOut.Controllers
             ExpenseVM expenseVM = new ExpenseVM()
             {
                 Expense = new Expense(),
-                TypeDropDown = _db.ExpensesTypes.Select(i => new SelectListItem
-                {
-                    Text = i.Name,
-                    Value = i.Id.ToString()
-                })
+                TypeDropDown = _db.ExpensesTypes.Select(i => new SelectListItem {Text = i.Name,Value = i.Id.ToString()})
             };
                       
 
@@ -96,34 +98,32 @@ namespace InAndOut.Controllers
         //UPDATE => GET METHOD
         public IActionResult Update(int? id)
         {
-            if (id == null || id == 0)
-                return NotFound();
-
-            var obj = _db.Expenses.Find(id);
-
-            if (obj == null)
-                return NotFound();
-
-            IEnumerable<SelectListItem> TypeDropDown = _db.ExpensesTypes.Select(i => new SelectListItem
+            ExpenseVM expenseVM = new ExpenseVM()
             {
-                Text = i.Name,
-                Value = i.Id.ToString()
-            });
+                Expense = new Expense(),
+                TypeDropDown = _db.ExpensesTypes.Select(i => new SelectListItem {Text = i.Name, Value = i.Id.ToString()})
+            };
 
-            ViewBag.TypeDropDown = TypeDropDown;
+            if (id == null || id == 00)
+                return NotFound();
 
-            return View(obj);
+            expenseVM.Expense = _db.Expenses.Find(id);
+
+            if (expenseVM.Expense == null)
+                return NotFound();
+
+            return View(expenseVM);
         }
 
         //UPDATE => POST METHOD
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Update(Expense obj)
+        public IActionResult Update(ExpenseVM obj)
         {
             if (ModelState.IsValid)
             {
                 //obj.ExpenseTypeId = 2;
-                _db.Expenses.Update(obj);
+                _db.Expenses.Update(obj.Expense);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
